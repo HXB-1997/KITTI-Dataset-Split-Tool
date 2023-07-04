@@ -5,10 +5,13 @@ import shutil
 source_folder = '/home/han/Desktop/hxb_projects/DataSets/KITTI/3D_det/training/'
 
 # 目标文件夹路径
-destination_folder = '/home/han/Desktop/hxb_projects/kitti_split_tool/val/'
+destination_folder = '/home/han/Desktop/hxb_projects/kitti_split_tool/train_val_test-Datasets/test/'
+
+# 标签TXT文件
+label_txt = '/home/han/Desktop/hxb_projects/kitti_split_tool/train_val_test-Datasets/test.txt'
 
 # 从train.txt文件中读取序号列表
-with open('split_rule/val.txt', 'r') as file:
+with open(label_txt, 'r') as file:
     indexes = [line.strip() for line in file]
 
 # 遍历序号列表
